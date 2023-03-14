@@ -14,4 +14,4 @@ spec:
     matchLabels:
       nephio.org/network-instance: sample-vpc
       nephio.org/network-name: sample-n6-net
-status: {conditionedstatus: {conditions: []}, allocatedprefix: 172.80.1.2/32, gateway: 172.80.1.1}
+status: {conditionedstatus: {conditions: []}, allocatedprefix: 172.80.1.20/32, gateway: 172.80.1.1}

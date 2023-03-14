@@ -19,21 +19,21 @@ upstreamLock:
     ref: free5gc-upf/v1
     commit: c18aa98d2c5a49e2aa5b62a6237ebef178721180
 info:
-  description: free5gc UPF package for creating UPF deployments that will be made by the Nephio free5gc edge operator
+  description: "free5gc UPF package for creating UPF deployments that will be made by the Nephio free5gc edge operator"
 pipeline:
   mutators:
   - image: gcr.io/jbelamaric-public/nephio-upf-ipam-fn:latest
-  - image: gcr.io/jbelamaric-public/nad-inject-fn:latest
+  - image: pmatysiaq/nad-inject-fn:latest
 status:
   conditions:
   - type: infra.nephio.org.ClusterContext.cluster-context.Injected
     status: "True"
     reason: ResourceInjectedFromCluster
-    message: resource with apiVersion "infra.nephio.org/v1alpha1", kind "ClusterContext", name "edge1", and namespace "default" injected to the package revision from the cluster
+    message: "resource with apiVersion \"infra.nephio.org/v1alpha1\", kind \"ClusterContext\", name \"edge1\", and namespace \"default\" injected to the package revision from the cluster"
   - type: nf.nephio.org.UPFDeployment.upf-deployment.Injected
     status: "True"
     reason: ResourceInjected
-    message: injected from FiveGCoreTopology "fivegcoretopology-sample" UPF name "agg-layer"
+    message: "injected from FiveGCoreTopology \"fivegcoretopology-sample\" UPF name \"agg-layer\""
   - type: ipam.nephio.org.IPAMAllocation.upf-edge1-n3.upf.Injected
     status: "True"
     reason: ResourceInjected

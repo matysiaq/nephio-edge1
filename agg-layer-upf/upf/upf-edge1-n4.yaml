@@ -1,0 +1,17 @@
+apiVersion: ipam.nephio.org/v1alpha1
+kind: IPAllocation
+metadata:
+  annotations:
+    config.kubernetes.io/local-config: "true"
+  creationTimestamp: null
+  labels:
+    nephio.org/interface: n4
+  name: upf-edge1-n4
+  namespace: upf
+spec:
+  kind: network
+  selector:
+    matchLabels:
+      nephio.org/network-instance: sample-vpc
+      nephio.org/network-name: sample-n4-net
+status: {conditionedstatus: {conditions: []}, allocatedprefix: 192.168.1.2/32, gateway: 192.168.1.1}
